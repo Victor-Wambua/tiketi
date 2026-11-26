@@ -1,6 +1,6 @@
 import { randomUUID } from 'node:crypto';
 import type { Server } from 'node:http';
-import { Agent } from 'undici';
+import { Agent, fetch as undiciFetch } from 'undici';
 import type { AddressInfo } from 'node:net';
 import { serve } from '@hono/node-server';
 import type { Hono } from 'hono';
@@ -75,7 +75,7 @@ export class Client {
     else if (body !== undefined) init.body = JSON.stringify(body);
     const res =
       typeof this.base === 'string'
-        ? await fetch(this.base + path, init)
+        ? await (this.dispatcher ? (undiciFetch as unknown as typeof fetch) : fetch)(this.base + path, init)
         : await this.base.request(path, init);
     const set = res.headers.getSetCookie();
     for (const c of set) {
