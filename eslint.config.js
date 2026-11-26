@@ -14,4 +14,9 @@ export default tseslint.config(
       'no-implied-eval': 'error',
     },
   },
+  {
+    // Tests read untyped JSON replies; `any` keeps assertions readable.
+    files: ['tests/**/*.ts', 'e2e/**/*.ts'],
+    rules: { '@typescript-eslint/no-explicit-any': 'off' },
+  },
 );

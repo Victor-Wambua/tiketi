@@ -240,13 +240,15 @@ export function extendHold(ctx: Ctx, input: { holdId: string; sessionId: string 
 export function releaseHold(ctx: Ctx, input: { holdId: string; sessionId: string }): void {
   const departureId = tx(ctx.db, () => {
     const hold = getHoldFor(ctx, input.holdId, input.sessionId);
+    if (hold.status === 'converted') {
+      const paid = one<{ id: string }>(
+        ctx.db,
+        `SELECT id FROM bookings WHERE hold_id = ? AND status = 'confirmed'`,
+        hold.id,
+      );
+      if (paid) throw conflict('already_booked', 'This booking is confirmed. Cancel the booking instead.');
+    }
     if (hold.status !== 'active') return hold.departure_id; // already gone: releasing twice is fine
-    const booking = one<{ status: string }>(
-      ctx.db,
-      `SELECT status FROM bookings WHERE hold_id = ? AND status = 'confirmed'`,
-      hold.id,
-    );
-    if (booking) throw conflict('already_booked', 'This booking is confirmed. Cancel the booking instead.');
     run(ctx.db, `UPDATE holds SET status = 'released' WHERE id = ?`, hold.id);
     run(ctx.db, `DELETE FROM seat_claims WHERE hold_id = ? AND kind = 'hold'`, hold.id);
     run(

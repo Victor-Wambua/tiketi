@@ -229,6 +229,7 @@ export function processScan(ctx: Ctx, input: ScanInput): ScanResult {
         first.id,
       );
     }
+    if (offline && first) run(ctx.db, `UPDATE scans SET conflict = 1 WHERE id = ?`, first.id);
     return finish(
       {
         result: 'duplicate',
