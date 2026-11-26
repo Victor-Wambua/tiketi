@@ -176,7 +176,8 @@ a {
 .topbar-inner {
   display: flex;
   align-items: center;
-  gap: var(--s4);
+  gap: var(--s2) var(--s4);
+  flex-wrap: wrap;
   max-width: 1180px;
   margin: 0 auto;
   padding: var(--s3) var(--s4);
@@ -1122,4 +1123,15 @@ th.num {
 
 h1[tabindex='-1']:focus {
   outline: none;
+}
+
+@media (max-width: 520px) {
+  .nav a,
+  .nav button {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+  .topbar-inner {
+    padding: var(--s2) var(--s3);
+  }
 }
