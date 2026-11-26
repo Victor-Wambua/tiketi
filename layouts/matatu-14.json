@@ -1,0 +1,174 @@
+{
+ "id": "matatu-14",
+ "name": "14-seater matatu",
+ "kind": "vehicle",
+ "width": 204,
+ "height": 388,
+ "seatSize": 36,
+ "tiers": [
+  {
+   "id": "front",
+   "name": "Front seat",
+   "priceKes": 800
+  },
+  {
+   "id": "std",
+   "name": "Standard",
+   "priceKes": 700
+  }
+ ],
+ "sections": [
+  {
+   "id": "cabin",
+   "name": "Cabin",
+   "rows": [
+    {
+     "id": "r1",
+     "label": "1",
+     "seats": [
+      {
+       "id": "1",
+       "label": "1",
+       "x": 132,
+       "y": 96,
+       "tier": "front"
+      }
+     ]
+    },
+    {
+     "id": "r2",
+     "label": "2",
+     "seats": [
+      {
+       "id": "2",
+       "label": "2",
+       "x": 24,
+       "y": 164,
+       "tier": "std"
+      },
+      {
+       "id": "3",
+       "label": "3",
+       "x": 68,
+       "y": 164,
+       "tier": "std"
+      },
+      {
+       "id": "4",
+       "label": "4",
+       "x": 132,
+       "y": 164,
+       "tier": "std"
+      }
+     ]
+    },
+    {
+     "id": "r3",
+     "label": "3",
+     "seats": [
+      {
+       "id": "5",
+       "label": "5",
+       "x": 24,
+       "y": 208,
+       "tier": "std"
+      },
+      {
+       "id": "6",
+       "label": "6",
+       "x": 68,
+       "y": 208,
+       "tier": "std"
+      },
+      {
+       "id": "7",
+       "label": "7",
+       "x": 132,
+       "y": 208,
+       "tier": "std"
+      }
+     ]
+    },
+    {
+     "id": "r4",
+     "label": "4",
+     "seats": [
+      {
+       "id": "8",
+       "label": "8",
+       "x": 24,
+       "y": 252,
+       "tier": "std"
+      },
+      {
+       "id": "9",
+       "label": "9",
+       "x": 68,
+       "y": 252,
+       "tier": "std"
+      },
+      {
+       "id": "10",
+       "label": "10",
+       "x": 132,
+       "y": 252,
+       "tier": "std"
+      }
+     ]
+    },
+    {
+     "id": "r5",
+     "label": "5",
+     "seats": [
+      {
+       "id": "11",
+       "label": "11",
+       "x": 24,
+       "y": 320,
+       "tier": "std"
+      },
+      {
+       "id": "12",
+       "label": "12",
+       "x": 68,
+       "y": 320,
+       "tier": "std"
+      },
+      {
+       "id": "13",
+       "label": "13",
+       "x": 116,
+       "y": 320,
+       "tier": "std"
+      },
+      {
+       "id": "14",
+       "label": "14",
+       "x": 160,
+       "y": 320,
+       "tier": "std"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "decor": [
+  {
+   "kind": "driver",
+   "x": 24,
+   "y": 96,
+   "w": 40,
+   "h": 36,
+   "label": "Driver"
+  },
+  {
+   "kind": "door",
+   "x": 176,
+   "y": 164,
+   "w": 6,
+   "h": 88,
+   "label": "Door"
+  }
+ ]
+}

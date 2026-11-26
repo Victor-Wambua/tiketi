@@ -1,0 +1,11 @@
+node_modules
+dist
+data/*.db
+data/*.db-*
+.env
+playwright-report
+test-results
+*.log
+.DS_Store
+data/*.pem
+data/*.key

@@ -1,0 +1,1187 @@
+{
+ "id": "hall-150",
+ "name": "Small theatre (150 seats)",
+ "kind": "hall",
+ "width": 716,
+ "height": 744,
+ "seatSize": 36,
+ "tiers": [
+  {
+   "id": "premium",
+   "name": "Premium stalls (A-C)",
+   "priceKes": 3500
+  },
+  {
+   "id": "std",
+   "name": "Standard stalls (D-J)",
+   "priceKes": 2500
+  },
+  {
+   "id": "balcony",
+   "name": "Balcony",
+   "priceKes": 1500
+  }
+ ],
+ "sections": [
+  {
+   "id": "stalls",
+   "name": "Stalls",
+   "rows": [
+    {
+     "id": "A",
+     "label": "A",
+     "seats": [
+      {
+       "id": "A1",
+       "label": "A1",
+       "x": 74,
+       "y": 100,
+       "tier": "premium"
+      },
+      {
+       "id": "A2",
+       "label": "A2",
+       "x": 118,
+       "y": 100,
+       "tier": "premium"
+      },
+      {
+       "id": "A3",
+       "label": "A3",
+       "x": 162,
+       "y": 100,
+       "tier": "premium"
+      },
+      {
+       "id": "A4",
+       "label": "A4",
+       "x": 206,
+       "y": 100,
+       "tier": "premium"
+      },
+      {
+       "id": "A5",
+       "label": "A5",
+       "x": 250,
+       "y": 100,
+       "tier": "premium"
+      },
+      {
+       "id": "A6",
+       "label": "A6",
+       "x": 294,
+       "y": 100,
+       "tier": "premium"
+      },
+      {
+       "id": "A7",
+       "label": "A7",
+       "x": 378,
+       "y": 100,
+       "tier": "premium"
+      },
+      {
+       "id": "A8",
+       "label": "A8",
+       "x": 422,
+       "y": 100,
+       "tier": "premium"
+      },
+      {
+       "id": "A9",
+       "label": "A9",
+       "x": 466,
+       "y": 100,
+       "tier": "premium"
+      },
+      {
+       "id": "A10",
+       "label": "A10",
+       "x": 510,
+       "y": 100,
+       "tier": "premium"
+      },
+      {
+       "id": "A11",
+       "label": "A11",
+       "x": 554,
+       "y": 100,
+       "tier": "premium"
+      },
+      {
+       "id": "A12",
+       "label": "A12",
+       "x": 598,
+       "y": 100,
+       "tier": "premium"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "label": "B",
+     "seats": [
+      {
+       "id": "B1",
+       "label": "B1",
+       "x": 74,
+       "y": 144,
+       "tier": "premium"
+      },
+      {
+       "id": "B2",
+       "label": "B2",
+       "x": 118,
+       "y": 144,
+       "tier": "premium"
+      },
+      {
+       "id": "B3",
+       "label": "B3",
+       "x": 162,
+       "y": 144,
+       "tier": "premium"
+      },
+      {
+       "id": "B4",
+       "label": "B4",
+       "x": 206,
+       "y": 144,
+       "tier": "premium"
+      },
+      {
+       "id": "B5",
+       "label": "B5",
+       "x": 250,
+       "y": 144,
+       "tier": "premium"
+      },
+      {
+       "id": "B6",
+       "label": "B6",
+       "x": 294,
+       "y": 144,
+       "tier": "premium"
+      },
+      {
+       "id": "B7",
+       "label": "B7",
+       "x": 378,
+       "y": 144,
+       "tier": "premium"
+      },
+      {
+       "id": "B8",
+       "label": "B8",
+       "x": 422,
+       "y": 144,
+       "tier": "premium"
+      },
+      {
+       "id": "B9",
+       "label": "B9",
+       "x": 466,
+       "y": 144,
+       "tier": "premium"
+      },
+      {
+       "id": "B10",
+       "label": "B10",
+       "x": 510,
+       "y": 144,
+       "tier": "premium"
+      },
+      {
+       "id": "B11",
+       "label": "B11",
+       "x": 554,
+       "y": 144,
+       "tier": "premium"
+      },
+      {
+       "id": "B12",
+       "label": "B12",
+       "x": 598,
+       "y": 144,
+       "tier": "premium"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "label": "C",
+     "seats": [
+      {
+       "id": "C1",
+       "label": "C1",
+       "x": 74,
+       "y": 188,
+       "tier": "premium"
+      },
+      {
+       "id": "C2",
+       "label": "C2",
+       "x": 118,
+       "y": 188,
+       "tier": "premium"
+      },
+      {
+       "id": "C3",
+       "label": "C3",
+       "x": 162,
+       "y": 188,
+       "tier": "premium"
+      },
+      {
+       "id": "C4",
+       "label": "C4",
+       "x": 206,
+       "y": 188,
+       "tier": "premium"
+      },
+      {
+       "id": "C5",
+       "label": "C5",
+       "x": 250,
+       "y": 188,
+       "tier": "premium"
+      },
+      {
+       "id": "C6",
+       "label": "C6",
+       "x": 294,
+       "y": 188,
+       "tier": "premium"
+      },
+      {
+       "id": "C7",
+       "label": "C7",
+       "x": 378,
+       "y": 188,
+       "tier": "premium"
+      },
+      {
+       "id": "C8",
+       "label": "C8",
+       "x": 422,
+       "y": 188,
+       "tier": "premium"
+      },
+      {
+       "id": "C9",
+       "label": "C9",
+       "x": 466,
+       "y": 188,
+       "tier": "premium"
+      },
+      {
+       "id": "C10",
+       "label": "C10",
+       "x": 510,
+       "y": 188,
+       "tier": "premium"
+      },
+      {
+       "id": "C11",
+       "label": "C11",
+       "x": 554,
+       "y": 188,
+       "tier": "premium"
+      },
+      {
+       "id": "C12",
+       "label": "C12",
+       "x": 598,
+       "y": 188,
+       "tier": "premium"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "label": "D",
+     "seats": [
+      {
+       "id": "D1",
+       "label": "D1",
+       "x": 74,
+       "y": 232,
+       "tier": "std"
+      },
+      {
+       "id": "D2",
+       "label": "D2",
+       "x": 118,
+       "y": 232,
+       "tier": "std"
+      },
+      {
+       "id": "D3",
+       "label": "D3",
+       "x": 162,
+       "y": 232,
+       "tier": "std"
+      },
+      {
+       "id": "D4",
+       "label": "D4",
+       "x": 206,
+       "y": 232,
+       "tier": "std"
+      },
+      {
+       "id": "D5",
+       "label": "D5",
+       "x": 250,
+       "y": 232,
+       "tier": "std"
+      },
+      {
+       "id": "D6",
+       "label": "D6",
+       "x": 294,
+       "y": 232,
+       "tier": "std"
+      },
+      {
+       "id": "D7",
+       "label": "D7",
+       "x": 378,
+       "y": 232,
+       "tier": "std"
+      },
+      {
+       "id": "D8",
+       "label": "D8",
+       "x": 422,
+       "y": 232,
+       "tier": "std"
+      },
+      {
+       "id": "D9",
+       "label": "D9",
+       "x": 466,
+       "y": 232,
+       "tier": "std"
+      },
+      {
+       "id": "D10",
+       "label": "D10",
+       "x": 510,
+       "y": 232,
+       "tier": "std"
+      },
+      {
+       "id": "D11",
+       "label": "D11",
+       "x": 554,
+       "y": 232,
+       "tier": "std"
+      },
+      {
+       "id": "D12",
+       "label": "D12",
+       "x": 598,
+       "y": 232,
+       "tier": "std"
+      }
+     ]
+    },
+    {
+     "id": "E",
+     "label": "E",
+     "seats": [
+      {
+       "id": "E1",
+       "label": "E1",
+       "x": 74,
+       "y": 276,
+       "tier": "std"
+      },
+      {
+       "id": "E2",
+       "label": "E2",
+       "x": 118,
+       "y": 276,
+       "tier": "std"
+      },
+      {
+       "id": "E3",
+       "label": "E3",
+       "x": 162,
+       "y": 276,
+       "tier": "std"
+      },
+      {
+       "id": "E4",
+       "label": "E4",
+       "x": 206,
+       "y": 276,
+       "tier": "std"
+      },
+      {
+       "id": "E5",
+       "label": "E5",
+       "x": 250,
+       "y": 276,
+       "tier": "std"
+      },
+      {
+       "id": "E6",
+       "label": "E6",
+       "x": 294,
+       "y": 276,
+       "tier": "std"
+      },
+      {
+       "id": "E7",
+       "label": "E7",
+       "x": 378,
+       "y": 276,
+       "tier": "std"
+      },
+      {
+       "id": "E8",
+       "label": "E8",
+       "x": 422,
+       "y": 276,
+       "tier": "std"
+      },
+      {
+       "id": "E9",
+       "label": "E9",
+       "x": 466,
+       "y": 276,
+       "tier": "std"
+      },
+      {
+       "id": "E10",
+       "label": "E10",
+       "x": 510,
+       "y": 276,
+       "tier": "std"
+      },
+      {
+       "id": "E11",
+       "label": "E11",
+       "x": 554,
+       "y": 276,
+       "tier": "std"
+      },
+      {
+       "id": "E12",
+       "label": "E12",
+       "x": 598,
+       "y": 276,
+       "tier": "std"
+      }
+     ]
+    },
+    {
+     "id": "F",
+     "label": "F",
+     "seats": [
+      {
+       "id": "F1",
+       "label": "F1",
+       "x": 74,
+       "y": 320,
+       "tier": "std"
+      },
+      {
+       "id": "F2",
+       "label": "F2",
+       "x": 118,
+       "y": 320,
+       "tier": "std"
+      },
+      {
+       "id": "F3",
+       "label": "F3",
+       "x": 162,
+       "y": 320,
+       "tier": "std"
+      },
+      {
+       "id": "F4",
+       "label": "F4",
+       "x": 206,
+       "y": 320,
+       "tier": "std"
+      },
+      {
+       "id": "F5",
+       "label": "F5",
+       "x": 250,
+       "y": 320,
+       "tier": "std"
+      },
+      {
+       "id": "F6",
+       "label": "F6",
+       "x": 294,
+       "y": 320,
+       "tier": "std"
+      },
+      {
+       "id": "F7",
+       "label": "F7",
+       "x": 378,
+       "y": 320,
+       "tier": "std"
+      },
+      {
+       "id": "F8",
+       "label": "F8",
+       "x": 422,
+       "y": 320,
+       "tier": "std"
+      },
+      {
+       "id": "F9",
+       "label": "F9",
+       "x": 466,
+       "y": 320,
+       "tier": "std"
+      },
+      {
+       "id": "F10",
+       "label": "F10",
+       "x": 510,
+       "y": 320,
+       "tier": "std"
+      },
+      {
+       "id": "F11",
+       "label": "F11",
+       "x": 554,
+       "y": 320,
+       "tier": "std"
+      },
+      {
+       "id": "F12",
+       "label": "F12",
+       "x": 598,
+       "y": 320,
+       "tier": "std"
+      }
+     ]
+    },
+    {
+     "id": "G",
+     "label": "G",
+     "seats": [
+      {
+       "id": "G1",
+       "label": "G1",
+       "x": 74,
+       "y": 364,
+       "tier": "std"
+      },
+      {
+       "id": "G2",
+       "label": "G2",
+       "x": 118,
+       "y": 364,
+       "tier": "std"
+      },
+      {
+       "id": "G3",
+       "label": "G3",
+       "x": 162,
+       "y": 364,
+       "tier": "std"
+      },
+      {
+       "id": "G4",
+       "label": "G4",
+       "x": 206,
+       "y": 364,
+       "tier": "std"
+      },
+      {
+       "id": "G5",
+       "label": "G5",
+       "x": 250,
+       "y": 364,
+       "tier": "std"
+      },
+      {
+       "id": "G6",
+       "label": "G6",
+       "x": 294,
+       "y": 364,
+       "tier": "std"
+      },
+      {
+       "id": "G7",
+       "label": "G7",
+       "x": 378,
+       "y": 364,
+       "tier": "std"
+      },
+      {
+       "id": "G8",
+       "label": "G8",
+       "x": 422,
+       "y": 364,
+       "tier": "std"
+      },
+      {
+       "id": "G9",
+       "label": "G9",
+       "x": 466,
+       "y": 364,
+       "tier": "std"
+      },
+      {
+       "id": "G10",
+       "label": "G10",
+       "x": 510,
+       "y": 364,
+       "tier": "std"
+      },
+      {
+       "id": "G11",
+       "label": "G11",
+       "x": 554,
+       "y": 364,
+       "tier": "std"
+      },
+      {
+       "id": "G12",
+       "label": "G12",
+       "x": 598,
+       "y": 364,
+       "tier": "std"
+      }
+     ]
+    },
+    {
+     "id": "H",
+     "label": "H",
+     "seats": [
+      {
+       "id": "H1",
+       "label": "H1",
+       "x": 74,
+       "y": 408,
+       "tier": "std"
+      },
+      {
+       "id": "H2",
+       "label": "H2",
+       "x": 118,
+       "y": 408,
+       "tier": "std"
+      },
+      {
+       "id": "H3",
+       "label": "H3",
+       "x": 162,
+       "y": 408,
+       "tier": "std"
+      },
+      {
+       "id": "H4",
+       "label": "H4",
+       "x": 206,
+       "y": 408,
+       "tier": "std"
+      },
+      {
+       "id": "H5",
+       "label": "H5",
+       "x": 250,
+       "y": 408,
+       "tier": "std"
+      },
+      {
+       "id": "H6",
+       "label": "H6",
+       "x": 294,
+       "y": 408,
+       "tier": "std"
+      },
+      {
+       "id": "H7",
+       "label": "H7",
+       "x": 378,
+       "y": 408,
+       "tier": "std"
+      },
+      {
+       "id": "H8",
+       "label": "H8",
+       "x": 422,
+       "y": 408,
+       "tier": "std"
+      },
+      {
+       "id": "H9",
+       "label": "H9",
+       "x": 466,
+       "y": 408,
+       "tier": "std"
+      },
+      {
+       "id": "H10",
+       "label": "H10",
+       "x": 510,
+       "y": 408,
+       "tier": "std"
+      },
+      {
+       "id": "H11",
+       "label": "H11",
+       "x": 554,
+       "y": 408,
+       "tier": "std"
+      },
+      {
+       "id": "H12",
+       "label": "H12",
+       "x": 598,
+       "y": 408,
+       "tier": "std"
+      }
+     ]
+    },
+    {
+     "id": "I",
+     "label": "I",
+     "seats": [
+      {
+       "id": "I1",
+       "label": "I1",
+       "x": 74,
+       "y": 452,
+       "tier": "std"
+      },
+      {
+       "id": "I2",
+       "label": "I2",
+       "x": 118,
+       "y": 452,
+       "tier": "std"
+      },
+      {
+       "id": "I3",
+       "label": "I3",
+       "x": 162,
+       "y": 452,
+       "tier": "std"
+      },
+      {
+       "id": "I4",
+       "label": "I4",
+       "x": 206,
+       "y": 452,
+       "tier": "std"
+      },
+      {
+       "id": "I5",
+       "label": "I5",
+       "x": 250,
+       "y": 452,
+       "tier": "std"
+      },
+      {
+       "id": "I6",
+       "label": "I6",
+       "x": 294,
+       "y": 452,
+       "tier": "std"
+      },
+      {
+       "id": "I7",
+       "label": "I7",
+       "x": 378,
+       "y": 452,
+       "tier": "std"
+      },
+      {
+       "id": "I8",
+       "label": "I8",
+       "x": 422,
+       "y": 452,
+       "tier": "std"
+      },
+      {
+       "id": "I9",
+       "label": "I9",
+       "x": 466,
+       "y": 452,
+       "tier": "std"
+      },
+      {
+       "id": "I10",
+       "label": "I10",
+       "x": 510,
+       "y": 452,
+       "tier": "std"
+      },
+      {
+       "id": "I11",
+       "label": "I11",
+       "x": 554,
+       "y": 452,
+       "tier": "std"
+      },
+      {
+       "id": "I12",
+       "label": "I12",
+       "x": 598,
+       "y": 452,
+       "tier": "std"
+      }
+     ]
+    },
+    {
+     "id": "J",
+     "label": "J",
+     "seats": [
+      {
+       "id": "J1",
+       "label": "J1",
+       "x": 74,
+       "y": 496,
+       "tier": "std",
+       "accessible": true
+      },
+      {
+       "id": "J2",
+       "label": "J2",
+       "x": 118,
+       "y": 496,
+       "tier": "std"
+      },
+      {
+       "id": "J3",
+       "label": "J3",
+       "x": 162,
+       "y": 496,
+       "tier": "std"
+      },
+      {
+       "id": "J4",
+       "label": "J4",
+       "x": 206,
+       "y": 496,
+       "tier": "std"
+      },
+      {
+       "id": "J5",
+       "label": "J5",
+       "x": 250,
+       "y": 496,
+       "tier": "std"
+      },
+      {
+       "id": "J6",
+       "label": "J6",
+       "x": 294,
+       "y": 496,
+       "tier": "std"
+      },
+      {
+       "id": "J7",
+       "label": "J7",
+       "x": 378,
+       "y": 496,
+       "tier": "std"
+      },
+      {
+       "id": "J8",
+       "label": "J8",
+       "x": 422,
+       "y": 496,
+       "tier": "std"
+      },
+      {
+       "id": "J9",
+       "label": "J9",
+       "x": 466,
+       "y": 496,
+       "tier": "std"
+      },
+      {
+       "id": "J10",
+       "label": "J10",
+       "x": 510,
+       "y": 496,
+       "tier": "std"
+      },
+      {
+       "id": "J11",
+       "label": "J11",
+       "x": 554,
+       "y": 496,
+       "tier": "std"
+      },
+      {
+       "id": "J12",
+       "label": "J12",
+       "x": 598,
+       "y": 496,
+       "tier": "std",
+       "accessible": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "balcony",
+   "name": "Balcony",
+   "rows": [
+    {
+     "id": "K",
+     "label": "K",
+     "seats": [
+      {
+       "id": "K1",
+       "label": "K1",
+       "x": 118,
+       "y": 588,
+       "tier": "balcony"
+      },
+      {
+       "id": "K2",
+       "label": "K2",
+       "x": 162,
+       "y": 588,
+       "tier": "balcony"
+      },
+      {
+       "id": "K3",
+       "label": "K3",
+       "x": 206,
+       "y": 588,
+       "tier": "balcony"
+      },
+      {
+       "id": "K4",
+       "label": "K4",
+       "x": 250,
+       "y": 588,
+       "tier": "balcony"
+      },
+      {
+       "id": "K5",
+       "label": "K5",
+       "x": 294,
+       "y": 588,
+       "tier": "balcony"
+      },
+      {
+       "id": "K6",
+       "label": "K6",
+       "x": 378,
+       "y": 588,
+       "tier": "balcony"
+      },
+      {
+       "id": "K7",
+       "label": "K7",
+       "x": 422,
+       "y": 588,
+       "tier": "balcony"
+      },
+      {
+       "id": "K8",
+       "label": "K8",
+       "x": 466,
+       "y": 588,
+       "tier": "balcony"
+      },
+      {
+       "id": "K9",
+       "label": "K9",
+       "x": 510,
+       "y": 588,
+       "tier": "balcony"
+      },
+      {
+       "id": "K10",
+       "label": "K10",
+       "x": 554,
+       "y": 588,
+       "tier": "balcony"
+      }
+     ]
+    },
+    {
+     "id": "L",
+     "label": "L",
+     "seats": [
+      {
+       "id": "L1",
+       "label": "L1",
+       "x": 118,
+       "y": 632,
+       "tier": "balcony"
+      },
+      {
+       "id": "L2",
+       "label": "L2",
+       "x": 162,
+       "y": 632,
+       "tier": "balcony"
+      },
+      {
+       "id": "L3",
+       "label": "L3",
+       "x": 206,
+       "y": 632,
+       "tier": "balcony"
+      },
+      {
+       "id": "L4",
+       "label": "L4",
+       "x": 250,
+       "y": 632,
+       "tier": "balcony"
+      },
+      {
+       "id": "L5",
+       "label": "L5",
+       "x": 294,
+       "y": 632,
+       "tier": "balcony"
+      },
+      {
+       "id": "L6",
+       "label": "L6",
+       "x": 378,
+       "y": 632,
+       "tier": "balcony"
+      },
+      {
+       "id": "L7",
+       "label": "L7",
+       "x": 422,
+       "y": 632,
+       "tier": "balcony"
+      },
+      {
+       "id": "L8",
+       "label": "L8",
+       "x": 466,
+       "y": 632,
+       "tier": "balcony"
+      },
+      {
+       "id": "L9",
+       "label": "L9",
+       "x": 510,
+       "y": 632,
+       "tier": "balcony"
+      },
+      {
+       "id": "L10",
+       "label": "L10",
+       "x": 554,
+       "y": 632,
+       "tier": "balcony"
+      }
+     ]
+    },
+    {
+     "id": "M",
+     "label": "M",
+     "seats": [
+      {
+       "id": "M1",
+       "label": "M1",
+       "x": 118,
+       "y": 676,
+       "tier": "balcony"
+      },
+      {
+       "id": "M2",
+       "label": "M2",
+       "x": 162,
+       "y": 676,
+       "tier": "balcony"
+      },
+      {
+       "id": "M3",
+       "label": "M3",
+       "x": 206,
+       "y": 676,
+       "tier": "balcony"
+      },
+      {
+       "id": "M4",
+       "label": "M4",
+       "x": 250,
+       "y": 676,
+       "tier": "balcony"
+      },
+      {
+       "id": "M5",
+       "label": "M5",
+       "x": 294,
+       "y": 676,
+       "tier": "balcony"
+      },
+      {
+       "id": "M6",
+       "label": "M6",
+       "x": 378,
+       "y": 676,
+       "tier": "balcony"
+      },
+      {
+       "id": "M7",
+       "label": "M7",
+       "x": 422,
+       "y": 676,
+       "tier": "balcony"
+      },
+      {
+       "id": "M8",
+       "label": "M8",
+       "x": 466,
+       "y": 676,
+       "tier": "balcony"
+      },
+      {
+       "id": "M9",
+       "label": "M9",
+       "x": 510,
+       "y": 676,
+       "tier": "balcony"
+      },
+      {
+       "id": "M10",
+       "label": "M10",
+       "x": 554,
+       "y": 676,
+       "tier": "balcony"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "decor": [
+  {
+   "kind": "stage",
+   "x": 74,
+   "y": 20,
+   "w": 568,
+   "h": 56,
+   "label": "STAGE"
+  },
+  {
+   "kind": "label",
+   "x": 74,
+   "y": 560,
+   "w": 120,
+   "h": 16,
+   "label": "Balcony"
+  }
+ ]
+}
