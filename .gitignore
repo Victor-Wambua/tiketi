@@ -9,3 +9,4 @@ test-results
 .DS_Store
 data/*.pem
 data/*.key
+data/e2e*
