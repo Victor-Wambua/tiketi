@@ -22,6 +22,8 @@ export interface HoldView {
   extensions: number;
   canExtend: boolean;
   totalKes: number;
+  /** Server time when this was produced, so clients can show a countdown without trusting their own clock. */
+  serverNow: number;
   seats: { seatId: string; label: string; priceKes: number; tierId: string }[];
 }
 
@@ -44,6 +46,7 @@ export function holdView(ctx: Ctx, hold: HoldRow): HoldView {
     extensions: hold.extensions,
     canExtend: canExtend(ctx, hold),
     totalKes: hold.total_kes,
+    serverNow: ctx.clock.now(),
     seats: seats.map((s) => ({
       seatId: s.seat_id,
       label: s.label,

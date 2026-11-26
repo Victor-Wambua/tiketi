@@ -15,6 +15,18 @@ export default tseslint.config(
     },
   },
   {
+    files: ['src/web/public/sw.js'],
+    languageOptions: {
+      globals: {
+        self: 'readonly',
+        caches: 'readonly',
+        fetch: 'readonly',
+        URL: 'readonly',
+        Response: 'readonly',
+      },
+    },
+  },
+  {
     // Tests read untyped JSON replies; `any` keeps assertions readable.
     files: ['tests/**/*.ts', 'e2e/**/*.ts'],
     rules: { '@typescript-eslint/no-explicit-any': 'off' },
