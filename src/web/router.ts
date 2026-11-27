@@ -1,3 +1,5 @@
+import { currentUrl, hrefFor, routeOf } from './base.ts';
+
 export interface Page {
   title: string;
   el: HTMLElement;
@@ -31,15 +33,20 @@ export function route(pattern: string, load: Loader) {
   routes.push({ re: new RegExp(`^${src}/?$`), keys, load });
 }
 
+/** Changes the address bar to `path` without rendering anything. */
+export function replaceUrl(path: string) {
+  history.replaceState(null, '', hrefFor(path));
+}
+
 export function navigate(path: string, replace = false) {
-  if (replace) history.replaceState(null, '', path);
-  else history.pushState(null, '', path);
+  if (replace) history.replaceState(null, '', hrefFor(path));
+  else history.pushState(null, '', hrefFor(path));
   void render();
 }
 
 export async function render() {
   const my = ++token;
-  const url = new URL(location.href);
+  const url = currentUrl();
   let page: Page | null = null;
   for (const r of routes) {
     const m = r.re.exec(url.pathname);
@@ -81,7 +88,7 @@ export function start(el: HTMLElement) {
     )
       return;
     e.preventDefault();
-    navigate(a.getAttribute('href') ?? '/');
+    navigate(routeOf(a.getAttribute('href') ?? '/'));
   });
   window.addEventListener('popstate', () => void render());
   void render();

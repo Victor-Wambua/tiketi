@@ -19,7 +19,11 @@
     "format": "prettier --write .",
     "test": "node --import tsx --test --test-concurrency=1 \"tests/**/*.test.ts\"",
     "test:e2e": "playwright test",
-    "check": "npm run typecheck && npm run lint && npm test"
+    "check": "npm run typecheck && npm run lint && npm test",
+    "demo:dev": "vite --config demo/vite.config.ts --port 9004",
+    "demo:build": "vite build --config demo/vite.config.ts",
+    "demo:preview": "vite preview --config demo/vite.config.ts --port 9004",
+    "test:demo": "playwright test --config playwright.demo.config.ts"
   },
   "dependencies": {
     "@hono/node-server": "^2.1.11",
@@ -30,12 +34,15 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@noble/hashes": "^2.4.0",
     "@playwright/test": "^1.65.1",
     "@types/node": "^22.20.7",
+    "@types/sql.js": "^1.16.1",
     "concurrently": "^10.0.7",
     "eslint": "^10.15.0",
     "jsqr": "^1.4.0",
     "prettier": "^3.10.1",
+    "sql.js": "^1.17.0",
     "tsx": "^4.23.15",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.74.0",

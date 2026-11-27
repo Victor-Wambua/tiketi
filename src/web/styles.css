@@ -11,7 +11,7 @@
   --accent: #f5a524;
   --accent-strong: #e08e0b;
   --on-accent: #2a1b00;
-  --ok: #0b7a60;
+  --ok: #0a7058;
   --ok-bg: #d8f1e8;
   --warn: #8a5a00;
   --warn-bg: #fdecc8;
@@ -150,7 +150,7 @@ a {
   color: var(--muted);
 }
 .eyebrow {
-  font: 700 0.72rem/1 var(--mono);
+  font: 700 0.75rem/1 var(--mono);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--muted);
@@ -1003,7 +1003,7 @@ table {
 }
 th {
   text-align: left;
-  font: 700 0.72rem var(--mono);
+  font: 700 0.75rem var(--mono);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);

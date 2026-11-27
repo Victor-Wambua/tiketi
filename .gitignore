@@ -4,6 +4,7 @@ data/*.db
 data/*.db-*
 .env
 playwright-report
+playwright-report-demo
 test-results
 *.log
 .DS_Store

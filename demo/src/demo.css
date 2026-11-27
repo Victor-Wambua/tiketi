@@ -1,0 +1,382 @@
+/* Demo-only styling. It uses the app's own tokens (src/web/styles.css), so light and dark follow it. */
+
+.boot {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: var(--s6) var(--s4);
+  color: var(--muted);
+  font-weight: 600;
+}
+.boot[role='alert'] {
+  color: var(--bad);
+}
+
+/* ---- the persistent banner -------------------------------------------------------------- */
+.demo-bar {
+  background: var(--sunk);
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
+}
+.demo-bar-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: var(--s3) var(--s4);
+  display: grid;
+  gap: var(--s2) var(--s5);
+}
+.demo-statement {
+  max-width: 62ch;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+.demo-statement a,
+.demo-tools a {
+  text-underline-offset: 3px;
+}
+.demo-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px var(--s4);
+  font-size: 1rem;
+}
+.demo-tools a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  font-weight: 650;
+}
+.demo-tools a[aria-current='page'] {
+  text-decoration-thickness: 3px;
+}
+.demo-actions {
+  display: contents;
+}
+.demo-btn {
+  min-height: 36px;
+  padding: 4px 12px;
+  border: 1.5px solid var(--ink);
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--text);
+  font: 650 1rem var(--font);
+  cursor: pointer;
+}
+.demo-btn:hover {
+  background: var(--paper);
+}
+.demo-clock {
+  flex-basis: 100%;
+  color: var(--muted);
+  font: 600 0.85rem var(--mono);
+}
+.demo-clock:empty {
+  display: none;
+}
+@media (min-width: 900px) {
+  .demo-bar-inner {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+  }
+  .demo-tools {
+    justify-content: flex-end;
+    max-width: 520px;
+  }
+  .demo-clock {
+    text-align: right;
+  }
+}
+@media (pointer: coarse) {
+  .demo-tools a,
+  .demo-btn {
+    min-height: 44px;
+  }
+}
+
+/* ---- demo pages ------------------------------------------------------------------------- */
+.demo-page {
+  max-width: 1080px;
+}
+.lede {
+  max-width: 64ch;
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+.prose {
+  max-width: 72ch;
+  padding-top: var(--s4);
+  border-top: 1px solid var(--line);
+}
+.prose > * + * {
+  margin-top: var(--s3);
+}
+.prose ul,
+.guide ol {
+  padding-left: 1.25rem;
+  display: grid;
+  gap: var(--s2);
+}
+.prose.small {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+.demo-page code,
+.guide code {
+  font: 0.9em var(--mono);
+  background: var(--sunk);
+  padding: 1px 5px;
+  border-radius: 4px;
+  overflow-wrap: anywhere;
+}
+.codeblock {
+  margin: 0;
+  padding: var(--s3) var(--s4);
+  background: var(--sunk);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow-x: auto;
+  font: 0.88rem/1.5 var(--mono);
+}
+.codeblock code {
+  background: none;
+  padding: 0;
+}
+.demo-page .code-text,
+.demo-page code.code-text {
+  font: 600 0.8rem/1.45 var(--mono);
+  background: none;
+  padding: 0;
+  color: var(--muted);
+  word-break: break-all;
+}
+.code-text mark {
+  background: var(--warn-bg);
+  color: var(--warn);
+  padding: 0 2px;
+  border-radius: 3px;
+  font-weight: 800;
+}
+.k {
+  font: 700 0.75rem var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* the guide on the events page */
+.guide {
+  max-width: 78ch;
+  padding: var(--s4) 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.guide > * + * {
+  margin-top: var(--s3);
+}
+.guide li::marker {
+  font: 700 0.9rem var(--mono);
+}
+
+/* tables: real columns on wide screens, labelled rows on phones */
+.demo-page table {
+  font-size: 0.95rem;
+}
+.demo-page th,
+.demo-page td {
+  vertical-align: top;
+  padding: 10px 10px 10px 0;
+}
+.demo-page th[scope='row'] {
+  font: 700 0.95rem var(--font);
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text);
+  border-bottom: 1px solid var(--line);
+}
+.demo-page td.num,
+.race-table th[scope='row'] {
+  white-space: nowrap;
+}
+.demo-page td.wrap {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 719px) {
+  table.stack-sm thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  table.stack-sm,
+  table.stack-sm tbody,
+  table.stack-sm tr,
+  table.stack-sm th,
+  table.stack-sm td {
+    display: block;
+  }
+  table.stack-sm tr {
+    padding: var(--s3) 0;
+    border-bottom: 1px solid var(--line);
+  }
+  table.stack-sm th[scope='row'],
+  table.stack-sm td {
+    border: 0;
+    padding: 2px 0;
+    width: auto;
+  }
+  table.stack-sm td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    font: 700 0.75rem var(--mono);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+}
+
+/* ---- race ------------------------------------------------------------------------------- */
+.lab-grid {
+  display: grid;
+  gap: var(--s6);
+  align-items: start;
+}
+@media (min-width: 900px) {
+  .lab-grid {
+    grid-template-columns: minmax(260px, 340px) minmax(0, 1fr);
+  }
+}
+.race-form {
+  display: grid;
+  gap: var(--s3);
+}
+.race-form .btn {
+  justify-self: start;
+}
+.race-results:empty {
+  display: none;
+}
+.race-results > * + * {
+  margin-top: var(--s3);
+}
+.race-db {
+  padding-top: var(--s4);
+  border-top: 1px solid var(--line);
+}
+.race-db:empty {
+  display: none;
+}
+.race-db > * + * {
+  margin-top: var(--s3);
+}
+.is-win th[scope='row'],
+.is-win td {
+  background: var(--ok-bg);
+}
+.verdict-line {
+  font-weight: 750;
+  padding-left: var(--s3);
+  border-left: 4px solid var(--line);
+}
+.verdict-line.ok {
+  border-left-color: var(--ok);
+  color: var(--ok);
+}
+.verdict-line.bad {
+  border-left-color: var(--bad);
+  color: var(--bad);
+}
+.after-race {
+  padding-top: var(--s2);
+}
+
+/* ---- gate lab --------------------------------------------------------------------------- */
+.ticket-pick {
+  display: grid;
+  gap: var(--s5);
+  align-items: start;
+}
+@media (min-width: 720px) {
+  .ticket-pick {
+    grid-template-columns: minmax(240px, 340px) minmax(0, 1fr);
+  }
+}
+.qr-wrap {
+  display: flex;
+  gap: var(--s4);
+  align-items: flex-start;
+}
+.qr-wrap > div:last-child {
+  min-width: 0;
+  flex: 1;
+}
+.qr-small {
+  width: 132px;
+  height: 132px;
+  flex: none;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+.qr-small svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.cases th[scope='row'] {
+  width: 14%;
+}
+.cases td:nth-child(2) {
+  width: 46%;
+}
+.cases td > p + p {
+  margin-top: var(--s2);
+}
+.num-lead {
+  font-family: var(--mono);
+  color: var(--muted);
+}
+.scan-out {
+  margin-top: var(--s2);
+}
+.scan-result {
+  padding: var(--s2) var(--s3);
+  border-left: 4px solid var(--line);
+  background: var(--sunk);
+}
+.scan-result.ok {
+  border-left-color: var(--ok);
+}
+.scan-result.bad {
+  border-left-color: var(--bad);
+}
+.scan-result p + p {
+  margin-top: 2px;
+}
+.scan-result .why {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 2px solid var(--line);
+  background: var(--card);
+  color: var(--text);
+  font: 500 0.85rem/1.45 var(--mono);
+  resize: vertical;
+}
+textarea:focus-visible {
+  border-color: var(--focus);
+  outline-offset: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .demo-btn {
+    transition: none;
+  }
+}

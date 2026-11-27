@@ -1,3 +1,5 @@
+import { hrefFor } from './base.ts';
+
 type Child = Node | string | number | null | undefined | false;
 type Props = Record<string, unknown> | null;
 
@@ -28,6 +30,9 @@ export function h<K extends keyof HTMLElementTagNameMap>(
 ): HTMLElementTagNameMap[K] {
   const el = document.createElement(tag);
   apply(el, props ?? null);
+  // In-app links are written as routes (`/d/abc`); the routing mode decides what the href is.
+  if (tag === 'a' && el.hasAttribute('data-link'))
+    el.setAttribute('href', hrefFor(el.getAttribute('href') ?? '/'));
   append(el, children);
   return el;
 }

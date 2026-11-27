@@ -2,6 +2,8 @@
 
 **Seat booking and ticketing that cannot double-book a seat and cannot be fooled by fake tickets.**
 
+**Live demo: <https://victor-wambua.github.io/tiketi/>** (runs entirely in your browser; no server)
+
 [![CI](https://github.com/Victor-Wambua/tiketi/actions/workflows/ci.yml/badge.svg)](https://github.com/Victor-Wambua/tiketi/actions/workflows/ci.yml)
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178c6)
@@ -11,6 +13,19 @@
 ![Choosing seats on the theatre map, with the hold countdown and checkout panel](docs/screenshots/seat-map-hold.png)
 
 > Status: portfolio build. Runs locally with synthetic sample data. Payments are **mocked** (no real M-Pesa), and camera scanning has not been tried on a physical phone. See [Status and limits](#status-and-limits).
+
+## Live demo
+
+[victor-wambua.github.io/tiketi](https://victor-wambua.github.io/tiketi/) runs the real thing in your browser. It is a static page, so there is no server: the repository's own Hono app, services and SQL run inside the page, with SQLite compiled to WebAssembly (sql.js) and a few Node built-ins swapped for browser adapters (`demo/src/shims`). Nothing under `src/` is changed for it, and nothing leaves your browser.
+
+- **Real:** the routes, seat holds, the primary key that refuses a second claim, mock M-Pesa with signed callbacks, Ed25519 tickets, the gate and the dashboard, plus the front-end itself.
+- **Simulated:** the network (`fetch` is answered in the page), the database file (in memory; reload resets), cookies, and time (a "Skip ahead 10 min" button). One JavaScript thread means requests run one after another, so true concurrency is only covered by the repository's tests.
+- **Try:** hold seats and watch the timer, pay with the mock phone (success, cancel, no funds, timeout), skip ahead to expire a hold, race several buyers for one seat, and scan a valid, repeated, tampered and forged ticket.
+- **Build it:** `npm run demo:build` (output in `dist/demo`). `npm run test:demo` builds it and drives it in Chromium; CI runs that on every push, and `tests/demoShims.test.ts` checks that the adapters give the same hashes and signatures as `node:crypto`.
+
+![Two buyers, one seat in the static demo](docs/screenshots/demo-two-buyers.png)
+
+![Gate checks in the static demo](docs/screenshots/demo-gate-checks.png)
 
 ## The problem
 
@@ -81,12 +96,13 @@ Key decisions (the reasoning is in [docs/CASE-STUDY.md](docs/CASE-STUDY.md)):
 ## Testing
 
 ```sh
-npm test            # 88 tests, node:test, no network
+npm test            # 95 tests, node:test, no network
 npm run test:e2e    # Playwright (needs: npx playwright install chromium; npm run build)
+npm run test:demo   # builds the static demo and runs its Playwright smoke tests
 npm run check       # typecheck + lint + tests
 ```
 
-Last run: **88 of 88 unit and integration tests pass** and **2 of 2 Playwright tests pass**. CI runs typecheck, lint, tests and build on Node 22 and 24, then the e2e job on Node 24.
+Last run: **95 of 95 unit and integration tests pass**, **2 of 2 Playwright tests pass** and **8 of 8 demo smoke tests pass**. CI runs typecheck, lint, tests and build on Node 22 and 24, then the e2e job on Node 24.
 
 | Area                    | Tests | What is covered                                                                                                                                                                                                                                                                                                                   |
 | ----------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -98,6 +114,7 @@ Last run: **88 of 88 unit and integration tests pass** and **2 of 2 Playwright t
 | Auth and idempotency    | 15    | Role matrix on every staff endpoint, ownership checks, throttling, security headers, key replay and mismatch                                                                                                                                                                                                                      |
 | Tickets and QR          | 8     | Flipping each of the 512 signature bits is rejected; field tampering; the rendered QR is decoded back with a QR reader                                                                                                                                                                                                            |
 | Dashboard, CSV, layouts | 10    | Numbers, formula-injection safe export, 14/49/150 seats                                                                                                                                                                                                                                                                           |
+| Demo adapters           | 7     | Browser hash, HMAC, scrypt and Ed25519 adapters give the same results as `node:crypto`; same-seed signatures are byte-identical                                                                                                                                                                                                   |
 | e2e (Playwright)        | 2     | Two browser contexts race for one seat (one wins, the other is told and picks another), pay, ticket, gate admits then refuses replay, offline scan then sync; dashboard roles                                                                                                                                                     |
 
 Not measured: code coverage percentage.
@@ -110,6 +127,7 @@ src/server/http/   routes and middleware (sessions, idempotency, security header
 src/server/payments/  PaymentProvider port and the mock M-Pesa adapter
 src/shared/        ticket code format + Ed25519 verify (used by server and browser), layout schema
 src/web/           vanilla-TS front-end: pages, seat map, gate engine, styles
+demo/              static demo: browser adapters, demo pages, Playwright smoke tests
 layouts/           the three shipped seat maps (generated by `npm run layouts`)
 tests/  e2e/       node:test suites and Playwright
 docs/              case study, screenshots

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#14213d" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Tiketi demo: seats that cannot be sold twice</title>
+    <meta
+      name="description"
+      content="A static demo of Tiketi. The real seat-booking server code runs in your browser: seat holds that cannot double-book, mock M-Pesa payments and Ed25519-signed tickets checked at the gate."
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <script type="module" src="/src/boot.ts"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <aside class="demo-bar" aria-label="About this demo">
+      <div class="demo-bar-inner">
+        <p class="demo-statement">
+          <strong>Static demo.</strong> Runs in your browser on invented data; nothing is sent anywhere. The
+          real project is a Hono API with a SQLite database:
+          <a href="https://github.com/Victor-Wambua/tiketi">repository</a> and
+          <a href="https://github.com/Victor-Wambua/tiketi#readme">README</a>.
+        </p>
+        <nav class="demo-tools" aria-label="Demo">
+          <a href="#/demo" data-link>How it works</a>
+          <a href="#/demo/race" data-link>Two buyers, one seat</a>
+          <a href="#/demo/gate" data-link>Gate checks</a>
+          <span id="demo-actions" class="demo-actions"></span>
+        </nav>
+      </div>
+    </aside>
+    <div id="boot" class="boot" role="status">Preparing sample data in your browser…</div>
+    <div id="shell"></div>
+    <noscript
+      ><p class="boot">This demo runs the server in your browser, so it needs JavaScript.</p></noscript
+    >
+  </body>
+</html>

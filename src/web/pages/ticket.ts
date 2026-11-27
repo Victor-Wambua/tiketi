@@ -1,7 +1,7 @@
 import { ApiError, get, post } from '../api.ts';
 import { h, trustedSvg } from '../dom.ts';
 import { fmtTime, fmtWhen, kes } from '../format.ts';
-import type { Page, RouteCtx } from '../router.ts';
+import { replaceUrl, type Page, type RouteCtx } from '../router.ts';
 
 interface Ticket {
   id: string;
@@ -159,7 +159,7 @@ export async function ticketPage(ctx: RouteCtx): Promise<Page> {
       const r = await post<{ ticket: Ticket }>(`/api/tickets/${ticket.id}/transfer`, {
         newHolderName: holder.value,
       });
-      history.replaceState(null, '', r.ticket.link);
+      replaceUrl(r.ticket.link);
       render(r.ticket);
       view.prepend(
         h(

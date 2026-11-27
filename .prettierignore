@@ -4,5 +4,6 @@ data
 layouts
 package-lock.json
 playwright-report
+playwright-report-demo
 test-results
 docs/screenshots

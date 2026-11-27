@@ -1,5 +1,6 @@
 import './styles.css';
 import { post } from './api.ts';
+import { currentUrl, hrefFor } from './base.ts';
 import { seatDefs } from './components/seatMap.ts';
 import { h } from './dom.ts';
 import { logoMark } from './logo.ts';
@@ -56,7 +57,7 @@ function paintNav() {
     );
   } else links.push(h('a', { href: '/login', 'data-link': '' }, 'Staff'));
   nav.replaceChildren(...links);
-  const here = location.pathname;
+  const here = hrefFor(currentUrl().pathname);
   for (const a of nav.querySelectorAll('a')) {
     if (a.getAttribute('href') === here) a.setAttribute('aria-current', 'page');
   }
@@ -96,5 +97,5 @@ void refreshSession();
 start(main);
 
 if ('serviceWorker' in navigator && import.meta.env.PROD) {
-  navigator.serviceWorker.register('/sw.js').catch(() => undefined);
+  navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch(() => undefined);
 }
